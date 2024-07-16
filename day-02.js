@@ -64,9 +64,11 @@ if (k<l||k>l) {
     console.log(false);
 }
 // • Task 13: Write a program that uses the ! operator to negate a condition and log the result to the console.
-
+console.log(!o);// it true make false and false make true 
 // Activity 5: Ternary Operator
 // • Task 14: Write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
+let q=(10<20)?"yes":"no";
+console.log(q);
 // Feature Request:
 // 1. Arithmetic Operations Script: Write a script that performs basic arithmetic operations (addition, subtraction, multiplication, division, remainder) on two numbers and logs the results.
 // 2. Comparison and Logical Operators Script: Create a script that compares two numbers using different comparison operators and combines conditions using logical operators, logging the
