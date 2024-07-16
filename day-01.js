@@ -43,3 +43,9 @@ r=300;
 console.log(r);
 
 
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin git@github.com:Hasibul-islam1/30-Days-of-Javascript-Challenge..git
+// git push -u origin main
