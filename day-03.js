@@ -28,6 +28,21 @@ if (person>=18) {
 // • Task 6: Write a program that uses the ternary operator to check if a number is even or odd and log the result to the console.
 // Activity 5: Combining Conditions
 // • Task 7: Write a program to check if a year is a leap year using multiple conditions (divisible by 4, but not 100 unless also divisible by 400) and log the result to the console.
+    let year =2004;
+    if (year%4==0) {
+        if (year%100==0) {
+            if (year%400==0) {
+                console.log("this leap year",year)
+            } else {
+                console.log("this not leap year")
+            }
+        } else {
+            console.log("this is leap year",year)
+        }
+    }
+    else{
+        console.log("this not leap year")
+    }
 // Feature Request:
 // 1. Number Check Script: Write a script that checks if a number is positive, negative, or zero using if-else statements and logs the result.
 // 2. Voting Eligibility Script: Create a script to check if a person is eligible to vote based on their age and log the result.
