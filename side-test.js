@@ -73,3 +73,102 @@ for (let i = 0; i <= number; i++) {
     n2 = nextTerm;
 }
 console.log(num);
+// find month name using js built in function 
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  
+  const d = new Date();
+//   document.write("The current month is " + monthNames[d.getMonth()]);
+console.log(monthNames[d.getMonth()]);
+console.log(d);
+
+// if else using in switch case
+let x = 100.009;
+let y = 100.001;
+let z = 100.001;
+let largest;
+if ((x >= y) && (x >= z)) {
+    // console.log("x is largest number")
+    largest='x';
+}
+else if ((z <= y) && (x <= y)) {
+    // console.log("y is lergest number")
+    largest='y';
+}
+else {
+    // console.log("z is largest number")
+    largest='z';
+}
+switch (largest) {
+    case 'x':
+        console.log("x is the largest number");
+        break;
+    case 'y':
+        console.log("y is the largest number");
+        break;
+    case 'z':
+        console.log("z is the largest number");
+        break;
+    default:
+        console.log("Error: unable to determine the largest number");
+}
+// marking system 
+let mark = 69;
+let grade;
+if (mark>=80 && mark<=100) {
+    grade='A+';
+    // console.log("A+")
+}
+else if(mark>=70 && mark<=79){
+    grade='A';
+//     console.log("A");
+ }
+else if(mark>=60 && mark<=69){
+    grade='A-';
+    // console.log("A-");
+}
+else if(mark>=50 && mark<=59){
+    grade='B';
+    // console.log("B");
+}
+else if(mark>=40 && mark<=49){
+    grade='C';
+    // console.log("C");
+}
+else if(mark>=33 && mark<=39){
+    grade='D';
+    // console.log("D");
+}
+ else {
+    grade='F';
+    // console.log("this student are fail")
+}
+// console.log(grade);
+switch (grade) {
+    case 'A+':
+        console.log(`mark is ${mark} and grade A+`)
+        break;
+    case 'A':
+        console.log(`mark is ${mark} and grade A`)
+        break;
+    case 'A-':
+        console.log(`mark is ${mark} and grade A-`)
+        break;
+    case 'B':
+        console.log(`mark is ${mark} and grade B`)
+        break;
+    case 'C':
+        console.log(`mark is ${mark} and grade C`)
+        break;
+    case 'D':
+        console.log(`mark is ${mark} and grade D`)
+        break;
+    case 'F':
+        console.log(`mark is ${mark} and grade F`)
+        break;
+
+    default:
+        console.log("Result is not found ");
+        break;
+}
