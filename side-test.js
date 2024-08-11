@@ -61,12 +61,12 @@ findOne(allperson);
 //     }
 // }
 // fibonacci(10);
-const numbers =100;
+const numbers =10;
 let num=[];
 let n1 = 0, n2 = 1, nextTerm;
 
 console.log('Fibonacci Series:');
-for (let i = 0; i <= number; i++) {
+for (let i = 0; i <= numbers; i++) {
     num.push(n1);
     nextTerm = n1 + n2;
     n1 = n2;
