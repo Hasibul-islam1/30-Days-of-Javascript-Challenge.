@@ -57,7 +57,21 @@ do {
     
 // Activity 5: Loop Control Statements
 // • Task 8: Write a program to print numbers from 1 to 10, but skip the number 5 using the continue statement.
+    for(let i =1;i<=10;i++){
+        if(i===5){
+            console.log("Hi")
+            continue;
+        }
+        console.log(i);
+    }
 // • Task 9: Write a program to print numbers from 1 to 10, but stop the loop when the number is 7 using the break statement.
+for(let z=1;z<=10;z++){
+    if(z===7){
+        console.log("This is stop");
+        break;
+    }
+    console.log(z)
+}
 // Feature Request:
 // 1. Number Printing Script: Write a script that prints numbers from 1 to 10 using a for loop and a while loop.
 // 2. Multiplication Table Script: Create a script that prints the multiplication table of 5 using a for loop.
