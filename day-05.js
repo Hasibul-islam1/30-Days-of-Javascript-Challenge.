@@ -13,7 +13,12 @@
     findNumber(20);
     findNumber(25);
 // • Task 2: Write a function to calculate the square of a number and return the result.
-
+    function square(number) {
+        let a=number*number;
+        return a;
+    }
+    let sqr=square(9);
+    console.log(sqr);
 // Activity 2: Function Expression
 // • Task 3: Write a function expression to find the maximum of two numbers and log the result to the console.
 // • Task 4: Write a function expression to concatenate two strings and return the result.
