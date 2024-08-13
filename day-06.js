@@ -33,8 +33,13 @@ let sum=number.reduce((total,num)=>total+num,0)
 console.log(sum);
 // Activity 4: Array Iteration
 // • Task 10: Use a for loop to iterate over the array and log each element to the console.
-
+for(let i =0;i<number.length;i++){
+    console.log(number[i])
+}
 // • Task 11: Use the forEach method to iterate over the array and log each element to the console.
+number.forEach(element => {
+    console.log(element);
+});
 // Activity 5: Multi-dimensional Arrays
 // • Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
 // • Task 13: Access and log a specific element from the two-dimensional array.
