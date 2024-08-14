@@ -1,10 +1,30 @@
 // Day 7: Objects
 // Activity 1: Object Creation and Access
 // • Task 1: Create an object representing a book with properties like title, author, and year, and log the object to the console.
+    let mybook={
+        title:"amar book",
+        author:"me",
+        year:2024,
+        getback:function(){
+            return `this is full object title is ${this.title} and author is ${this.author} year is ${this.year}`
+        },
+        updateYear:function(newYear){
+            this.year=newYear;
+        }
+    }
+    console.log(mybook);
 // • Task 2: Access and log the title and author properties of the book object.
+console.log(mybook.title);
+console.log(mybook.author);
 // Activity 2: Object Methods
 // • Task 3: Add a method to the book object that returns a string with the book's title and author, and log the result of calling this method.
+console.log(mybook.getback())
+console.log(JSON.stringify(mybook));
 // • Task 4: Add a method to the book object that takes a parameter (year) and updates the book's year property, then log the updated object.
+mybook.year=2300;
+console.log(mybook);
+mybook.updateYear(4500);
+console.log(mybook);
 // Activity 3: Nested Objects
 // • Task 5: Create a nested object representing a library with properties like name and books (an array of book objects), and log the library object to the console.
 // • Task 6: Access and log the name of the library and the titles of all the books in the library.

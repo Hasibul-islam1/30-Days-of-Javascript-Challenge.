@@ -68,6 +68,15 @@
     console.log(greet("Alise"));
 // Activity 5: Higher-Order Functions
 // • Task 9: Write a higher-order function that takes a function and a number, and calls the function that many times.
+    function repartFunction(fun,time) {
+        for(let i=0;i<time;i++){
+            fun();
+        }
+    }
+    function sayName() {
+        console.log("Hellow");
+    }
+  repartFunction(sayName,3)
 // • Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
 // Feature Request:
 // 1. Even or Odd Function Script: Write a script that includes a function to check if a number is even or odd and logs the result.
