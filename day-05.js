@@ -78,6 +78,26 @@
     }
   repartFunction(sayName,3)
 // • Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
+// Higher-order function
+function applyFunctions(func1, func2, value) {
+    const firstResult = func1(value);    // Apply the first function to the value
+    const finalResult = func2(firstResult); // Apply the second function to the result of the first function
+    return finalResult;  // Return the final result
+}
+
+// Example functions
+function double(num) {
+    return num * 2;
+}
+
+function square(num) {
+    return num * num;
+}
+
+// Using the higher-order function
+const result = applyFunctions(double, square, 5);
+console.log(result); // Output will be 100
+
 // Feature Request:
 // 1. Even or Odd Function Script: Write a script that includes a function to check if a number is even or odd and logs the result.
 // 2. Square Calculation Function Script: Create a script that includes a function to calculate the square of a number and returns the result.
