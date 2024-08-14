@@ -42,7 +42,28 @@ number.forEach(element => {
 });
 // Activity 5: Multi-dimensional Arrays
 // • Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
+let matrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+console.log(matrix[2][2]);
+console.log(matrix[1][1])
 // • Task 13: Access and log a specific element from the two-dimensional array.
+let cabe=[
+    [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+],
+[
+    [10,11,12],
+    [13,14,15],
+    [16,17,18]
+]
+]
+console.log(cabe[1][1][2]);
+console.log(cabe[0][0][2])
 // Feature Request:
 // 1. Array Manipulation Script: Write a script that demonstrates the creation of an array, adding and removing elements using push, pop, shift, and unshift methods.
 // 2. Array Transformation Script: Create a script that uses map, filter, and reduce methods to transform and aggregate array data.
