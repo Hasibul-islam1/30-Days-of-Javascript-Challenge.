@@ -49,7 +49,7 @@ let library={
     ],
     closeLivary:function () {
         return`name is ${this.name} and address ${this.address} famuse author ${this.book[0].author}`;
-    }
+    },
 }
 console.log(library);
 console.log(library.closeLivary());
@@ -62,9 +62,17 @@ bookName.forEach(element => {
 })
 // Activity 4: The this Keyword
 // • Task 7: Add a method to the book object that uses the this keyword to return a string with the book's title and year, and log the result of calling this method.
-
+library.nazrulBook=function(){
+    return`BookName is ${this.book[0].BookName} and publish is ${this.book[0].publish}`
+}
+console.log(library.nazrulBook());
+console.log(library);
 // Activity 5: Object Iteration
 // • Task 8: Use a for...in loop to iterate over the properties of the book object and log each property and its value.
+for(const key in library){
+    console.log(key);
+    console.log()
+}
 // • Task 9: Use Object.keys and Object.values methods to log all the keys and values of the book object.
 // Feature Request:
 // 1. Book Object Script: Write a script that creates a book object, adds methods to it, and logs its properties and method results.
