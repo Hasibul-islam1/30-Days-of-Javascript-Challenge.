@@ -2,7 +2,17 @@
 // Tasks/Activities:
 // Activity 1: Template Literals
 // • Task 1: Use template literals to create a string that includes variables for a person's name and age, and log the string to the console.
+let Name="Hasibul Islam";
+let age =23;
+let detils=`Name is ${Name} and age is ${age}`;
+console.log(detils);
 // • Task 2: Create a multi-line string using template literals and log it to the console.
+let AnthomSong=`Amar sonar bangla
+ami tomay valo basi 
+ciro din tomar akash amar pran a bazay bashi 
+amar sonar bangla ami tomay valo bashi
+`
+console.log(AnthomSong);
 // Activity 2: Destructuring
 // • Task 3: Use array destructuring to extract the first and second elements from an array of numbers and log them to the console.
 // • Task 4: Use object destructuring to extract the title and author from a book object and log them to the console.
