@@ -70,10 +70,17 @@ console.log(library);
 // Activity 5: Object Iteration
 // • Task 8: Use a for...in loop to iterate over the properties of the book object and log each property and its value.
 for(const key in library){
-    console.log(key);
-    console.log()
+    if (library.hasOwnProperty(key)) {
+        console.log(`${key}: ${library[key]} 100`);
+    }
+    // console.log(key);
+    // console.log(library[key],100);
 }
 // • Task 9: Use Object.keys and Object.values methods to log all the keys and values of the book object.
+let hellow=Object.keys(library);
+console.log(hellow);
+let gelo =Object.values(library);
+console.log(gelo);
 // Feature Request:
 // 1. Book Object Script: Write a script that creates a book object, adds methods to it, and logs its properties and method results.
 // 2. Library Object Script: Create a script that defines a library object containing an array of book objects and logs the library's details.
