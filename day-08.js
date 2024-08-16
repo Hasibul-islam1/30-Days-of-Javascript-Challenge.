@@ -43,10 +43,30 @@ function sum(...ar) {
 sum(...roll,9,10);
 // Activity 4: Default Parameters
 // • Task 7: Write a function that takes two parameters and returns their product, with the second parameter having a default value of 1. Log the result of calling this function with and
-
+ function add(a,b=1) {
+    console.log(a+b);
+ }
+ add(10)
 // without the second parameter.
 // Activity 5: Enhanced Object Literals
 // • Task 8: Use enhanced object literals to create an object with methods and properties, and log the object to the console.
+let name ="Hasibul";
+let selary=20000; 
+let me ={
+    name,
+    selary,
+    HomeRent:0.10,
+    mainSelary:function() {
+        return`main selery is`+ this.selary*(1-this.HomeRent)
+    },
+    fulldatile(){
+        return`NAME IS ${this.name} SELARY IS ${this.selary}`
+    }
+ }
+ console.log(me.name);
+console.log(me);
+console.log(me.mainSelary());
+console.log(me.fulldatile());
 // • Task 9: Create an object with computed property names based on variables and log the object to the console.
 // Feature Request:
 // 1. Template Literals Script: Write a script that demonstrates the use of template literals to create and log strings with embedded variables and multi-line strings.
