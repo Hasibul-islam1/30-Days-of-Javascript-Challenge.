@@ -13,6 +13,13 @@ for(const element of chang) {
 }
 // Activity 2: Creating and Appending Elements
 // • Task 3: Create a new div element with some text content and append it to the body.
+    let getBody=document.getElementsByTagName("body");
+    // console.log(getBody);
+    let makediv=document.createElement("div");
+    getBody.appendChild(makediv);
+    makediv.style.background="red";
+    makediv.style.height="100px";
+
 // • Task 4: Create a new li element and add it to an existing ul list.
 // Activity 3: Removing Elements
 // • Task 5: Select an HTML element and remove it from the DOM.
