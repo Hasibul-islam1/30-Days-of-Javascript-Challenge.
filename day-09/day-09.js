@@ -2,7 +2,15 @@
 // Tasks/Activities:
 // Activity 1: Selecting and Manipulating Elements
 // • Task 1: Select an HTML element by its ID and change its text content.
+document.getElementById("line").innerText="Hey i am Hasibul Islam";
 // • Task 2: Select an HTML element by its class and change its background color.
+let chang=document.getElementsByClassName("list");
+console.log(chang);
+for(const element of chang) {
+    let randomcolor=Math.floor(Math.random()*16777215).toString(16);
+     element.style.backgroundColor ="#"+randomcolor;
+    console.log(element);
+}
 // Activity 2: Creating and Appending Elements
 // • Task 3: Create a new div element with some text content and append it to the body.
 // • Task 4: Create a new li element and add it to an existing ul list.
