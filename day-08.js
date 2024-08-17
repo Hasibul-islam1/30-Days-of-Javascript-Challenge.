@@ -61,14 +61,18 @@ let me ={
     },
     fulldatile(){
         return`NAME IS ${this.name} SELARY IS ${this.selary}`
-    }
+    },
+    //computed property names based on variables
+    ["full"+"Name"]:"Hasibul Islam"
+       
  }
  console.log(me.name);
 console.log(me);
 console.log(me.mainSelary());
 console.log(me.fulldatile());
-// • Task 9: Create an object with computed property names based on variables and log the object to the console.
 
+// • Task 9: Create an object with computed property names based on variables and log the object to the console.
+console.log(me.fullName);
 // Feature Request:
 // 1. Template Literals Script: Write a script that demonstrates the use of template literals to create and log strings with embedded variables and multi-line strings.
 // 2. Destructuring Script: Create a script that uses array and object destructuring to extract values and log them.
