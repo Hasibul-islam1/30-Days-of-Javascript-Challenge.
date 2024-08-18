@@ -172,3 +172,19 @@ switch (grade) {
         console.log("Result is not found ");
         break;
 }
+// Create a new div element with some text content and append it to the body.
+// Create a new div element
+const newDiv = document.createElement('div');
+
+// Add some text content to the div
+newDiv.textContent = 'Hello, this is a new div element!';
+
+// Optionally, style the div
+newDiv.style.padding = '20px';
+newDiv.style.backgroundColor = 'lightcoral';
+newDiv.style.color = 'white';
+newDiv.style.fontSize = '20px';
+newDiv.style.textAlign = 'center';
+
+// Append the new div to the body
+document.body.appendChild(newDiv);

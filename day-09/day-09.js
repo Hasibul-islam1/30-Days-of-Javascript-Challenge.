@@ -16,16 +16,28 @@ for(const element of chang) {
     let getBody=document.getElementsByTagName("body");
     // console.log(getBody);
     let makediv=document.createElement("div");
-    getBody.appendChild(makediv);
+    getBody[0].appendChild(makediv);
     makediv.style.background="red";
     makediv.style.height="100px";
-
+    let makeP=document.createElement("h2");
+    makeP.innerText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae tempora recusandae facilis ea nihil impedit pariatur iusto nam incidunt ducimus"
+    makediv.appendChild(makeP);
 // • Task 4: Create a new li element and add it to an existing ul list.
+    let getUl=document.getElementById("unoder-list");
+    for(let i=1;i<5;i++){
+        let makelist=document.createElement("li");
+        makelist.innerText=`now number is ${i}`;
+        getUl.appendChild(makelist);
+    }
 // Activity 3: Removing Elements
 // • Task 5: Select an HTML element and remove it from the DOM.
+    let deletes =document.getElementById("delete");
+    deletes.remove()
 // • Task 6: Remove the last child of a specific HTML element.
+getUl.lastChild.remove();
 // Activity 4: Modifying Attributes and Classes
 // • Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
+
 // • Task 8: Add and remove a CSS class to/from an HTML element.
 // Activity 5: Event Handling
 // • Task 9: Add a click event listener to a button that changes the text content of a paragraph.
