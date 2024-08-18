@@ -37,11 +37,19 @@ for(const element of chang) {
 getUl.lastChild.remove();
 // Activity 4: Modifying Attributes and Classes
 // • Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
-
+    let img=document.getElementById("myimg");
+    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXTPuiJmJPHb-4ES2ESNMTU61N2Y1-vANe2w&s";
 // • Task 8: Add and remove a CSS class to/from an HTML element.
+let a=document.getElementById("unoder-list");
+a.classList.add("singleLine");
+a.classList.remove("singleLine");
 // Activity 5: Event Handling
 // • Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+function hitme() {
+    document.getElementById("hare").textContent="hit me few minute ago";
+}
 // • Task 10: Add a mouseover event listener to an element that changes its border color.
+
 // Feature Request:
 // 1. Text Content Manipulation Script: Write a script that selects an HTML element by its ID and changes its text content.
 // 2. Element Creation Script: Create a script that demonstrates creating a new div element and appending it to the body.
