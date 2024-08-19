@@ -2,11 +2,24 @@
 // Tasks/Activities:
 // Activity 1: Basic Event Handling
 // • Task 1: Add a click event listener to a button that changes the text content of a paragraph.
-    
+        document.getElementById("hitme").addEventListener("click",()=>{
+            document.getElementById("change").textContent="Hey i am Hasibul";
+        })
 // • Task 2: Add a double-click event listener to an image that toggles its visibility.
+// document.getElementById("img").addEventListener("dblclick",hit)
+    function hit() {
+        document.getElementById("img").style.display="none";
+    }
 // Activity 2: Mouse Events
 // • Task 3: Add a mouseover event listener to an element that changes its background color.
+    document.getElementById("box").addEventListener("mouseover",()=>{
+        let randomcolor=Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById("box").style.background="#"+randomcolor;
+    })
 // • Task 4: Add a mouseout event listener to an element that resets its background color.
+    document.getElementById("box").addEventListener("mouseout",()=>{
+        document.getElementById("box").style.background="Black";
+    })
 // Activity 3: Keyboard Events
 // • Task 5: Add a keydown event listener to an input field that logs the key pressed to the console.
 // • Task 6: Add a keyup event listener to an input field that displays the current value in a paragraph.
