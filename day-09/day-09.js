@@ -49,7 +49,13 @@ function hitme() {
     document.getElementById("hare").textContent="hit me few minute ago";
 }
 // • Task 10: Add a mouseover event listener to an element that changes its border color.
-
+    document.getElementById("round").addEventListener("mouseover",()=>{
+        let randomcolor=Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById("round").style.backgroundColor ="#"+randomcolor;
+    })
+    document.getElementById("round").addEventListener("mouseout",()=>{
+        document.getElementById("round").style.background="Black";
+    })
 // Feature Request:
 // 1. Text Content Manipulation Script: Write a script that selects an HTML element by its ID and changes its text content.
 // 2. Element Creation Script: Create a script that demonstrates creating a new div element and appending it to the body.
