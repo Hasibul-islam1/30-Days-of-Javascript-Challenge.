@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day-10</title>
     <style>
-        #hitme{
+        #hitme {
             display: block;
             margin-bottom: 20px;
         }
-        #box{
+
+        #box {
             width: 200px;
             height: 200px;
             background-color: black;
         }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
     </style>
 </head>
+
 <body>
-    <p id="change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet ratione voluptas, quidem fugiat aut officia vitae assumenda amet necessitatibus!</p>
+    <p id="change">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eveniet ratione voluptas, quidem
+        fugiat aut officia vitae assumenda amet necessitatibus!</p>
     <button type="button" id="hitme">Click Me </button>
-    <img ondblclick="hit()"id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXTPuiJmJPHb-4ES2ESNMTU61N2Y1-vANe2w&s" alt="" srcset="">
+    <img ondblclick="hit()" id="img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXTPuiJmJPHb-4ES2ESNMTU61N2Y1-vANe2w&s" alt=""
+        srcset="">
     <div id="box">
 
     </div>
+    <input type="text" value="" id="information" placeholder="keydown Box">
+    <p id="down"></p>
+    <input type="text" id="info" placeholder="keyup Box">
+    <p id="press"></p>
+    <div>
+        <h2> put your Information</h2>
+        <form action="" id="form">
+            <label for="firstname">FirstName:</label>
+            <input type="text" name="firstname" id="first-name">
+            <label for="lastname">LirstName:</label>
+            <input type="text" name="lasttname" id="last-name">
+        </form>
+        <p id="name"></p>
+    </div>
     <script src="day-10.js"></script>
 </body>
+
 </html>
