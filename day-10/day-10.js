@@ -50,8 +50,30 @@
     })
 // Activity 5: Event Delegation
 // • Task 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation. 
-
+    document.getElementById("list").addEventListener("click",(event)=>{
+        console.log(event.target.innerText);
+    })
 // • Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.
+let list=document.getElementById("list");
+let button=document.getElementById("btn");
+const fruits = [
+    "Apple", "Banana", "Orange", "Grapes", "Strawberry",
+    "Mango", "Pineapple", "Watermelon", "Pear", "Peach",
+    "Blueberry", "Cherry", "Kiwi", "Lemon", "Lime",
+    "Coconut", "Papaya", "Pomegranate", "Avocado", "Tomato"
+];
+let Nowindex=0;
+button.addEventListener("click",()=>{
+    if(Nowindex<fruits.length){
+        let makeli=document.createElement("li");
+        makeli.innerText=fruits[Nowindex];
+        list.appendChild(makeli);
+        Nowindex++;
+    }else{
+        // button.Disabled=true;
+        alert("All common fruit are add this list");
+    }   
+})
 // Feature Request:
 // 1. Click Event Script: Write a script that adds a click event listener to a button to change the text content of a paragraph.
 // 2. Mouse Events Script: Create a script that handles mouseover and mouseout events to change the background color of an element.
