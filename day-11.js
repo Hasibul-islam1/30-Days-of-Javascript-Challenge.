@@ -2,6 +2,7 @@
 // Tasks/Activities:
 // Activity 1: Understanding Promises
 // • Task 1: Create a promise that resolves with a message after a 2-second timeout and log the message to the console.
+    
 // • Task 2: Create a promise that rejects with an error message after a 2-second timeout and handle the error using .catch().
 // Activity 2: Chaining Promises
 // • Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log messages in a specific order.
