@@ -73,7 +73,7 @@ fetchData(processData);
 
 // setInterval and setTimeout both are asynchronous javascript 
 console.log("hellow1");
-setInterval(()=>{
+setTimeout(()=>{
   console.log("hellow2");
 },2000);
 console.log("hellow3");
