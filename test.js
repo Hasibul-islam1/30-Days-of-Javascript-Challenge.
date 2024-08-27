@@ -70,3 +70,39 @@ function processData(data) {
 // Fetch data and process it after fetching
 fetchData(processData);
 
+
+// setInterval and setTimeout both are asynchronous javascript 
+console.log("hellow1");
+setInterval(()=>{
+  console.log("hellow2");
+},2000);
+console.log("hellow3");
+
+// couse enrollment proces in js call back 
+
+function courseEnrollment(money, callback) {
+  if (money === 3500) {
+      console.log("Course Enrolled");
+      callback(); // Call the next step in the process
+  } else {
+      console.log("Insufficient funds. Cannot enroll in the course.");
+  }
+}
+
+function assessmentMark(num, callback) {
+  if (num >= 80) {
+      console.log("Ready to get certified");
+      callback(); // Call the next step in the process
+  } else {
+      console.log("Insufficient marks. Cannot get certified.");
+  }
+}
+
+function complete() {
+  console.log("Take a certificate");
+}
+
+// Starting the enrollment process
+courseEnrollment(3500, () => {
+  assessmentMark(85, complete);
+});
