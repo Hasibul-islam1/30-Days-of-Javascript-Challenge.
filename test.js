@@ -37,3 +37,36 @@ for(let i=5;i>=1;i--){
     }
     console.log(pattern);
 }
+
+// call back function 
+// make a calcuter use a call back function 
+// ekta function ar maje ono ekta function ke peramitar hishbe line oi ta ke call back function bole 
+ function show(result) {
+    console.log(result);
+ }
+function calculation(nam1,num2,callback) {
+  console.log(nam1,num2);
+  setTimeout(() => {
+    let sum=nam1+num2;
+    callback(sum);
+  },3000);
+
+}
+calculation(20,20,show);
+
+// anunimas data 
+function fetchData(callback) {
+  console.log("Fetching data...");
+  setTimeout(() => {
+      console.log("Data fetched!");
+      callback("Fetched data");
+  }, 5000);
+}
+
+function processData(data) {
+  console.log("Processing " + data);
+}
+
+// Fetch data and process it after fetching
+fetchData(processData);
+
