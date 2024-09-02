@@ -2,8 +2,25 @@
 // Tasks/Activities:
 // Activity 1: Understanding Promises
 // • Task 1: Create a promise that resolves with a message after a 2-second timeout and log the message to the console.
-    
+const status=false;
+    const myPromise=new Promise((resolve,reject)=>{
+        setTimeout(() => {
+        if(status){
+            resolve("Hi");
+        }
+        else{
+            reject("hellow");
+        } 
+        },2000);
+    })
+    myPromise 
+    .then((value)=>{
+        console.log(value);
+    })
 // • Task 2: Create a promise that rejects with an error message after a 2-second timeout and handle the error using .catch().
+    .catch((value)=>{
+        console.log(value)
+    })
 // Activity 2: Chaining Promises
 // • Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log messages in a specific order.
 // Activity 3: Using Async/Await
