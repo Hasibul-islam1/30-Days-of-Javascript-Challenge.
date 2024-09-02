@@ -106,3 +106,28 @@ function complete() {
 courseEnrollment(3500, () => {
   assessmentMark(85, complete);
 });
+// promise 
+let status=false;
+console.log("Task 01");
+// promise difination 
+const myPromise=new Promise((resolve,reject)=>{
+  setTimeout(() => {
+    if(status){
+     resolve("Task 02");
+    }
+    else{
+     reject("Failed");
+    }
+     
+   }, 3000);
+})
+// promise call 
+myPromise
+.then((value)=>{
+  console.log(value);
+})
+.catch((value)=>{
+  console.log(value);
+})
+
+console.log("task 03");
