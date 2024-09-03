@@ -131,3 +131,23 @@ myPromise
 })
 
 console.log("task 03");
+
+// try anather call back funcation 
+ const taskOne=(callback)=>{
+  console.log("hellow1");
+  callback();
+ }
+ const taskTow=(callback)=>{
+  setTimeout(()=>{
+  console.log("hellow2")
+  callback();
+  },6000)
+ }
+ const taskThree=()=>{
+  console.log("Hellow3");
+ }
+taskOne(()=>{
+  taskTow(()=>{
+    taskThree();
+  })
+})

@@ -23,6 +23,7 @@ const status=false;
     })
 // Activity 2: Chaining Promises
 // • Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log messages in a specific order.
+    
 // Activity 3: Using Async/Await
 // • Task 4: Write an async function that waits for a promise to resolve and then logs the resolved value.
 // • Task 5: Write an async function that handles a rejected promise using try-catch and logs the error message.
