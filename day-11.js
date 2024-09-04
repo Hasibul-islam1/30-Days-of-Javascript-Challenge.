@@ -23,9 +23,58 @@ const status=false;
     })
 // Activity 2: Chaining Promises
 // • Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log messages in a specific order.
+       function fetchData(step,time) {
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(`Data from step ${step} fetched`)
+            },time)
+        })
+       }
+       fetchData(1,1000)
+       .then((message)=>{
+        console.log(message);
+        return fetchData(2,2000);
+       })
+       .then((message)=>{
+        console.log(message);
+        return fetchData(3,4500);
+       })
+       .then((message)=>{
+        console.log(message);
+        return fetchData(4,3000);
+       })
+       .then((message)=>{
+        console.log(message);
+        console.log("all message done ");
+       })
+       .catch((err)=>{
+        console.log(err);
+       })
+    //    another way to solve 
     
+    // Function to simulate fetching data from a server
+function fetchData(message, delay) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log(message);
+        resolve();
+      }, delay);
+    });
+  }
+  
+  // Chain promises to log messages in a specific order
+  fetchData('Fetching user data...', 1000)
+    .then(() => fetchData('User data received.', 500))
+    .then(() => fetchData('Processing user data...', 1500))
+    .then(() => fetchData('User data processed.', 1000))
+    .then(() => fetchData('Fetching additional data...', 2000))
+    .then(() => fetchData('Additional data received.', 500))
+    .then(() => fetchData('All tasks completed!', 500))
+    .catch((error) => console.error('An error occurred:', error));
+  
 // Activity 3: Using Async/Await
 // • Task 4: Write an async function that waits for a promise to resolve and then logs the resolved value.
+
 // • Task 5: Write an async function that handles a rejected promise using try-catch and logs the error message.
 // Activity 4: Fetching Data from an API
 // • Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
