@@ -151,3 +151,43 @@ taskOne(()=>{
     taskThree();
   })
 })
+
+// try promicse 
+
+const OneTask=()=>{
+  return new Promise((resolve,reject)=>{
+    resolve("taskOne done")
+  })
+}
+const TowTask=()=>{
+  return new Promise((resolve,reject)=>{
+    resolve("taskTow done")
+  })
+}
+const ThreeTask=()=>{
+  return new Promise((resolve,reject)=>{
+    resolve("taskThree done")
+  })
+}
+const FourTask=()=>{
+  return new Promise((resolve,reject)=>{
+    resolve("taskFour done")
+  })
+}
+OneTask()
+.then((res)=>{
+  console.log(res);
+  return TowTask();
+})
+.then((res)=>{
+  console.log(res);
+  return ThreeTask();
+})
+.then((res)=>{
+  console.log(res);
+  return FourTask();
+})
+.then((res)=>{
+ console.log(res);
+ console.log("all task complete");
+})
