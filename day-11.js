@@ -74,10 +74,56 @@ function fetchData(message, delay) {
   
 // Activity 3: Using Async/Await
 // • Task 4: Write an async function that waits for a promise to resolve and then logs the resolved value.
-
+    function makeMessage(message) {
+        return new Promise((resolve,reject)=>{
+            resolve(message);
+        })
+    }
+    async function callmessage() {
+        const firstMessage= await makeMessage("Hi i am hear");
+        console.log(firstMessage);
+    }
+    callmessage();
 // • Task 5: Write an async function that handles a rejected promise using try-catch and logs the error message.
+const HasibulTask=()=>{
+    return new Promise((resolve,reject)=>{
+      resolve("Hasibul Task done");
+    })
+  }
+  const SamiTask=()=>{
+    return new Promise((resolve,reject)=>{
+      resolve("Sami Task done");
+    })
+  }
+  const PasntoTask=()=>{
+    return new Promise((resolve,reject)=>{
+      reject("Pranto Task done");
+    })
+  }
+  const PoragTask=()=>{
+    return new Promise((resolve,reject)=>{
+      resolve("Porag Task done");
+    })
+  }
+  async function callAll(){
+  try{
+    const t1=await HasibulTask();
+    console.log(t1);
+    const t2=await SamiTask();
+    console.log(t2);
+    const t3=await PasntoTask();
+    console.log(t3);
+    const t4=await PoragTask();
+    console.log(t4);
+  }
+  catch(err){
+    console.log("ERROR:",err);
+  }
+  }
+  callAll();
 // Activity 4: Fetching Data from an API
 // • Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
+
 // • Task 7: Use the fetch API to get data from a public API and log the response data to the console using async/await.
 // Activity 5: Concurrent Promises
 // • Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
