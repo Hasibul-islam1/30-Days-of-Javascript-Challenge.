@@ -123,7 +123,16 @@ const HasibulTask=()=>{
   callAll();
 // Activity 4: Fetching Data from an API
 // • Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
-
+   const makeRequest=async(url)=>{
+    const res= await fetch(url)
+    const data= await res.json();
+    return data;
+   }
+   const getdata=()=>{
+    makeRequest("https://jsonplaceholder.typicode.com/posts/")
+    .then((res)=>console.log(res))
+   }
+   getdata();
 // • Task 7: Use the fetch API to get data from a public API and log the response data to the console using async/await.
 // Activity 5: Concurrent Promises
 // • Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
