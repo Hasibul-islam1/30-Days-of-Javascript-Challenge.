@@ -163,6 +163,26 @@ Promise.all([promise1, promise2, promise3])
   });
 
 // • Task 9: Use Promise.race to log the value of the first promise that resolves among multiple promises.
+const promise10 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 1 resolved"), 3000); // Resolves after 3 seconds
+});
+
+const promise20 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 2 resolved"), 1000); // Resolves after 1 second
+});
+
+const promise30 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 3 resolved"), 2000); // Resolves after 2 seconds
+});
+
+Promise.race([promise10, promise20, promise30])
+  .then((value) => {
+    console.log(value); // Logs the value of the first resolved promise
+  })
+  .catch((error) => {
+    console.error("One of the promises rejected:", error);
+  });
+
 // Feature Request:
 // 1. Promise Creation Script: Write a script that demonstrates creating and handling promises, including both resolved and rejected states.
 // 2. Promise Chaining Script: Create a script that chains multiple promises and logs messages in a specific sequence.
