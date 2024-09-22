@@ -122,7 +122,7 @@ const HasibulTask=()=>{
   }
   callAll();
 // Activity 4: Fetching Data from an API
-// • Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
+// • Task 6: Use the fetch API to get data from a public API and log the response data to the console using async/await.
    const makeRequest=async(url)=>{
     const res= await fetch(url)
     const data= await res.json();
@@ -133,9 +133,35 @@ const HasibulTask=()=>{
     .then((res)=>console.log(res))
    }
    getdata();
-// • Task 7: Use the fetch API to get data from a public API and log the response data to the console using async/await.
+// • Task 7: Use the fetch API to get data from a public API and log the response data to the console using promises.
+const loadData=()=>{
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((res)=>res.json())
+  .then((data)=>console.log(data))
+}
+loadData();
 // Activity 5: Concurrent Promises
 // • Task 8: Use Promise.all to wait for multiple promises to resolve and then log all their values.
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 1 resolved"), 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 2 resolved"), 2000);
+});
+
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Promise 3 resolved"), 1500);
+});
+
+Promise.all([promise1, promise2, promise3])
+  .then((values) => {
+    console.log(values); // Logs: ["Promise 1 resolved", "Promise 3 resolved", "Promise 2 resolved"]
+  })
+  .catch((error) => {
+    console.error("One of the promises failed:", error);
+  });
+
 // • Task 9: Use Promise.race to log the value of the first promise that resolves among multiple promises.
 // Feature Request:
 // 1. Promise Creation Script: Write a script that demonstrates creating and handling promises, including both resolved and rejected states.
